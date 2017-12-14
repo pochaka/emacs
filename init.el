@@ -1,5 +1,9 @@
 ;;; init.el --- Emacs configuration
 
+;;; Commentary:
+
+;;; Code:
+
 ;; --------------------------------------
 ;;  INITIALIZATION
 ;; --------------------------------------
@@ -13,13 +17,13 @@
 
 ;; Packages list
 (defvar myPackages
-  '(elpy                ;; Python IDE
-    py-autopep8		;; Python PEP8 compliance
-    flycheck            ;; Syntax check
-    magit		;; Git integration
-    org                 ;;
-    org-agenda-property ;;
-    material-theme ))   ;;
+  '(elpy                   ;; Python IDE
+    py-autopep8		   ;; Python PEP8 compliance
+    flycheck               ;; Syntax check
+    magit		   ;; Git integration
+    org                    ;;
+    org-agenda-property    ;;
+    color-theme-modern ))  ;;
     
 
 ;; Install packages if not exist
@@ -32,9 +36,11 @@
 ;;  BASIC CUSTOMIZATION
 ;; --------------------------------------
 
-(setq inhibit-startup-message t) ;; hide the startup message
-(load-theme 'material t)         ;; load material theme
-(global-linum-mode t)            ;; enable line numbers globaly
+
+(add-to-list 'default-frame-alist '(width . 105))
+(add-to-list 'default-frame-alist '(height . 45))
+(setq inhibit-startup-message t)  ;; hide the startup message
+(load-theme 'railscast t)         ;; load material theme
 
 (require 'ido)
   (ido-mode t)
@@ -57,10 +63,8 @@
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-xq" 'org-agenda-exit)
 (setq org-log-done t)
 
-(setq org-agenda-files (list "/home/cittim/Documents/agenda/network.org"
-                             "/home/cittim/Documents/agenda/servers.org"
-                             "/home/cittim/Documents/agenda/organisation.org"
-                             "/home/cittim/Documents/agenda/other.org"))
+(setq org-agenda-files (list "/home/cittim/Documents/Agenda/work.org"))
 ;;; init.el ends here
