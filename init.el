@@ -39,7 +39,9 @@
 
 (add-to-list 'default-frame-alist '(width . 105))
 (add-to-list 'default-frame-alist '(height . 45))
-(setq inhibit-startup-message t)  ;; hide the startup message
+(setq inhibit-startup-message t
+      initial-scratch-message nil)  ;; hide the startup message
+
 (load-theme 'railscast t)         ;; load material theme
 
 (require 'ido)
