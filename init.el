@@ -9,28 +9,28 @@
 ;; --------------------------------------
 
 ;; Repos
-(require 'package)
-(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(setq package-archives '(("melpa-stable" ."http://stable.melpa.org/packages/")))
+
+;; Activate packages
 (package-initialize)
-(when (not package-archive-contents)
+
+;; Fetch the list of packages available
+(unless package-archive-contents
   (package-refresh-contents))
 
-;; Packages list
-(defvar myPackages
-  '(elpy                   ;; Python IDE
-    py-autopep8		   ;; Python PEP8 compliance
-    flycheck               ;; Syntax check
-    magit		   ;; Git integration
-    org                    ;;
-    org-agenda-property    ;;
-    color-theme-modern ))  ;;
-    
+;; List of my packages
+(setq package-list '(elpy
+		     py-autopep8
+		     flycheck
+		     magit
+		     org
+		     org-agenda-property
+		     color-theme-modern ))
 
-;; Install packages if not exist
-(mapc #'(lambda (package)
+;; Install missing packages
+(dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
-    myPackages)
 
 ;; --------------------------------------
 ;;  BASIC CUSTOMIZATION
