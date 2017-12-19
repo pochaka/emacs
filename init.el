@@ -36,13 +36,13 @@
 ;;  BASIC CUSTOMIZATION
 ;; --------------------------------------
 
-
 (add-to-list 'default-frame-alist '(width . 105))
 (add-to-list 'default-frame-alist '(height . 45))
-(setq inhibit-startup-message t
-      initial-scratch-message nil)  ;; hide the startup message
 
-(load-theme 'railscast t)         ;; load material theme
+(setq inhibit-startup-message t
+      initial-scratch-message nil)
+
+(load-theme 'railscast t)
 
 (require 'ido)
   (ido-mode t)
