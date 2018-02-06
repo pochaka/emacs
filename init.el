@@ -9,7 +9,9 @@
 ;; --------------------------------------
 
 ;; Repos
-(setq package-archives '(("melpa-stable" ."http://stable.melpa.org/packages/")))
+(setq package-archives '(("melpa-stable" . "https://stable.melpa.org/packages/")
+			 ("gnu" . "https://elpa.gnu.org/packages/")
+			 ))
 
 ;; Activate packages
 (package-initialize)
@@ -49,7 +51,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-
+xox
 ;; --------------------------------------
 ;;  PYTHON CONFIGURATION
 ;; --------------------------------------
