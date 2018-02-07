@@ -52,18 +52,7 @@
   (setq org-log-done t)
   (setq org-agenda-files (list "/home/cittim/Documents/Agenda/work.org")))
 
-<<<<<<< HEAD
 (use-package org-agenda-property)
-=======
-(require 'ido)
-  (ido-mode t)
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-;; --------------------------------------
-;;  PYTHON CONFIGURATION
-;; --------------------------------------
->>>>>>> 54c60e9... garbage cleaning
 
 (use-package magit
   :init
