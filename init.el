@@ -17,6 +17,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(set-default-font "terminus 12")
 
 ;; ---------------------------------------
 ;;  PACKAGES
@@ -81,6 +82,18 @@
 (use-package powerline
   :init
   (powerline-default-theme))
+
+(use-package dockerfile-mode
+  :init
+  (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode)))
+
+(use-package rust-mode
+  :init
+  (add-to-list 'auto-mode-alist '("*.rs" . rust-mode)))
+
+(use-package autopair
+  :init
+  (autopair-global-mode 1))
 
 
 ;;; init.el ends here
