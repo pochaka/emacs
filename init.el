@@ -81,7 +81,7 @@
 
 (use-package powerline
   :init
-  (powerline-default-theme))
+  (powerline-center-theme))
 
 (use-package dockerfile-mode
   :init
