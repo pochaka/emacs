@@ -50,6 +50,8 @@
   (define-key global-map "\C-cl" 'org-store-link)
   (define-key global-map "\C-ca" 'org-agenda)
   (define-key global-map "\C-xq" 'org-agenda-exit)
+  (define-key global-map "\C-cc" 'org-capture)
+  (define-key global-map "\C-cb" 'org-switchb)
   (setq org-log-done t)
   (setq org-agenda-files (list "/home/cittim/Documents/Agenda/work.org")))
 
@@ -94,6 +96,23 @@
 (use-package autopair
   :init
   (autopair-global-mode 1))
+(use-package neotree
+  :init
+  (global-set-key [f8] 'neotree-toggle))
 
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (neotree use-package rust-mode py-autopep8 powerline org-agenda-property material-theme magit flycheck elpy dockerfile-mode color-theme-modern autopair))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
