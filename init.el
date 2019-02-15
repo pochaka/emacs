@@ -17,7 +17,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(set-frame-font "terminus 12")
+(set-frame-font "IBM Plex Mono 11")
 
 ;; ---------------------------------------
 ;;  PACKAGES
@@ -96,9 +96,14 @@
 (use-package autopair
   :init
   (autopair-global-mode 1))
+
 (use-package neotree
   :init
   (global-set-key [f8] 'neotree-toggle))
+
+(use-package go-mode
+  :init
+  (add-to-list 'auto-mode-alist '("*.go" . go-mode)))
 
 
 ;;; init.el ends here
